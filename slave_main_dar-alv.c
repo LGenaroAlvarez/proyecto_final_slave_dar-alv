@@ -25,10 +25,10 @@
  * CONSTANTES 
  ------------------------------------------------------------------------------*/
 #define _XTAL_FREQ 4000000
-#define IN_MIN 0                // Valor minimo de entrada del potenciometro
-#define IN_MAX 255              // Valor máximo de entrada del potenciometro
+#define IN_MIN 0                // VALOR MINIMO DE ENTRADA DEL POTENCIOMETRO
+#define IN_MAX 255              // VALOR MAXIMO  DE ENTRADA DEL POTENCIOMETRO
 #define OUT_MIN 13              // Valor minimo de ancho de pulso de señal PWM
-#define OUT_MAX 80  
+#define OUT_MAX 80              // Valor maximo de ancho de pulso de señal PWM
 /*------------------------------------------------------------------------------
  * VARIABLES 
  ------------------------------------------------------------------------------*/
@@ -40,6 +40,8 @@ unsigned short CCPRx = 0;
  * PROTOTIPO DE FUNCIONES 
  ------------------------------------------------------------------------------*/
 void setup(void);
+
+// FUNCION DE MAPEO
 unsigned short map(uint8_t val, uint8_t in_min, uint8_t in_max, 
             unsigned short out_min, unsigned short out_max);
 
@@ -144,6 +146,7 @@ void setup(void){
     return;
 }
 
+// FUNCION DE MAPEO DE DATOS
 unsigned short map(uint8_t x, uint8_t x0, uint8_t x1, 
             unsigned short y0, unsigned short y1){
     return (unsigned short)(y0+((float)(y1-y0)/(x1-x0))*(x-x0));
