@@ -1,6 +1,6 @@
 /*
  * File:   slave_main_dar-alv.c
- * Author: luisg
+ * Autores: Genaro Alvarez y Luis Dardon
  *
  * Created on May 24, 2022, 4:46 PM
  */
